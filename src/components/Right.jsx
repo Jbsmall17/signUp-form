@@ -18,7 +18,6 @@ export default function Right() {
         [name] : value
       }
     })
-    
   }
   return (
     <article className='right'>
