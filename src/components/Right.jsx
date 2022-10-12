@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import Input from './input'
+import Input from './Input'
 
 export default function Right() {
   const [data,setData] = useState({
