@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+}
+div#root{
+  width:100%;
+  height: 100%;
+}
+main.container{
+  display:flex;
+}
+article.left{
+  width:35%;
+}
+article.left img{
+  width: 100%;
+  height: 100%;
+
+}
+article.right{
+  width: 65%;
+}
+article.right > div:nth-child(1){
+  padding-left:3%;
+  padding-top: 13%;
+  padding-right: 48%;
+  height: 35%;
+  background-color: #E5E7EB;
+}
+p{
+  font-weight: bold;
+}
+p.pfisrt{
+  margin-bottom: 5%;
+}
+article.right > div:nth-child(2){
+  padding: 1% 3% 0 3%;
+  height: 30%; 
+}
+article.right > div:nth-child(2) h2{
+  margin-bottom: 1.5%;
+}
+article.right > div:nth-child(2) label{
+  font-size: 0.8rem;
+}
+input.PASSWORD,input.CONFIRM{
+  margin-bottom: 0%;
+  border:1px solid #E5E7EB;
+  
+}
+input.FIRST,input.EMAIL,input.PHONE,input.LAST{
+  border:1px solid #E5E7EB;
+  margin-bottom: 9%;
+}
+article.right > div:nth-child(2) input:focus{
+  outline:none;
+  border:1px solid blue;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+}
+div.input-form{
+  display:flex;
+  gap:5%;
+}
+div.input-form p{
+  font-size: 0.5rem;
+  color:red;
+}
+article.right > div:nth-child(3){
+  border-bottom: 1px solid white;
+  box-shadow: inset 0 4px 3px rgba(0,0,0,0.2);
+  background-color: #E5E7EB;
+  padding:2% 3% 3% 3%;
+  height: 35%;
+}
+article.right > div:nth-child(3) button{
+  padding: 10px 20px;
+  background-color: #596D48;
+  color:white;
+  border:none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+article.right > div:nth-child(3) button:hover{
+  color: #596D48;
+  background-color:white;
+}
