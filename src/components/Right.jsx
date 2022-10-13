@@ -19,6 +19,10 @@ export default function Right() {
       }
     })
   }
+  console.log(data)
+  const styling = {
+    borderColor: ((data.confirm != "" || data.password!="")&& data.confirm == data.password) ? "green" : "red"
+  }
   return (
     <article className='right'>
       <div>
@@ -32,13 +36,14 @@ export default function Right() {
         <div>
           <Input name="firstname" handle={update} data={data} label="FIRST NAME" type="text"/>
           <Input name="email" data={data} label= "EMAIL" type="email" />
-          <Input  name="password" handle={update} data={data} label="PASSWORD" type="password"/>
-          <p>*password does not match</p>
+          <Input styles={styling} name="password" handle={update} data={data} label="PASSWORD" type="password"/>
+          {!((data.confirm != "" || data.password!="") && data.confirm == data.password) ? <p>*password does not match</p>:
+          <p className='match'>password does match</p>}
         </div>
         <div>
         <Input name="lastname" data={data} label="LAST NAME" type="text"/>
         <Input name="phonenumber" data={data} label="PHONE NUMBER" type="text"/>
-        <Input name="confirm" handle={update} data={data} label="CONFIRM PASSWORD" type="password"/>
+        <Input styles={styling} name="confirm" handle={update} data={data} label="CONFIRM PASSWORD" type="password"/>
         </div>
         </div>
       </div>

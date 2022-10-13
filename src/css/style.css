@@ -42,16 +42,17 @@ article.left div.logo-container .logo{
   height: 100%;
 }
 article.left div.logo-container p{
-  font-family: 'Epilogue', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color:white;
   font-size: 60px;
+  font-style: italic;
 }
 article.right{
   width: 65%;
 }
 article.right > div:nth-child(1){
   padding-left:3%;
-  padding-top: 13%;
+  padding-top: 9%;
   padding-right: 48%;
   height: 35%;
   background-color: #E5E7EB;
@@ -60,7 +61,7 @@ p{
   font-weight: bold;
 }
 p.pfisrt{
-  margin-bottom: 5%;
+  margin-bottom: 7%;
 }
 article.right > div:nth-child(2){
   padding: 1% 3% 0 3%;
@@ -79,7 +80,7 @@ input.PASSWORD,input.CONFIRM{
 }
 input.FIRST,input.EMAIL,input.PHONE,input.LAST{
   border:1px solid #E5E7EB;
-  margin-bottom: 9%;
+  margin-bottom: 6%;
 }
 article.right > div:nth-child(2) input:focus{
   outline:none;
@@ -93,6 +94,10 @@ div.input-form{
 div.input-form p{
   font-size: 0.5rem;
   color:red;
+}
+div.input-form p.match{
+  font-size: 0.5rem;
+  color:green
 }
 article.right > div:nth-child(3){
   border-bottom: 1px solid white;
@@ -112,4 +117,80 @@ article.right > div:nth-child(3) button{
 article.right > div:nth-child(3) button:hover{
   color: #596D48;
   background-color:white;
+}
+@media screen and (max-width:1300px){
+  article.right > div:nth-child(1){
+    padding-top: 6%;
+  }
+  p.pfisrt{
+    margin-bottom: 5%;
+  }
+  input.FIRST,input.EMAIL,input.PHONE,input.LAST{
+    margin-bottom: 3%;
+  }
+}
+@media screen and (max-width:1100px){
+  main.container{
+    flex-direction: column;
+  } 
+  article.left{
+    width: 100%;
+    height: 65vh;
+  }
+  article.left > img{
+    width:100%;
+    height: 100%;
+  }
+  article.left div.logo-container{
+    top:50%;
+    transform: translateY(-50%);
+  }
+  article.left div.logo-container .logo{
+    width: 25vw;
+  }
+  article.right{
+    width: 100%;
+    height: auto;
+  }
+  article.right > div:nth-child(1){
+    height: 25vh;
+    padding-left: 10vw;
+    padding-top: 5vh;
+    padding-right: 10vw;
+    text-align: center;
+  }
+  p.pfisrt{
+    margin-bottom: 2vh;
+  }
+  article.right > div:nth-child(2){
+    height: 22vh;
+    padding: 1vh 3vh;
+  }
+  article.right > div:nth-child(2) h2{
+    text-align: center;
+    margin-bottom: 0.5vh;
+  }
+  div.input-form > div{
+    flex:1;
+  }
+  div.input-form > div input{
+    width:100%;
+  }
+  article.right > div:nth-child(3){
+    height: 25vh;
+    padding: 2vh 3vh;
+  }
+}
+@media screen and (max-width:320px){
+  article.left{
+    width: 100%;
+    height: 40vh;
+  }
+  article.right > div:nth-child(2){
+    height: 20vh;
+    padding: 1vh 3vh;
+  }
+  article.right > div:nth-child(2) label{
+    font-size: 0.6rem;
+  }
 }
