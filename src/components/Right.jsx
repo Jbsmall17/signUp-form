@@ -20,9 +20,9 @@ export default function Right() {
       };
     });
   }
-  console.log(data)
   const styling = {
-    borderColor: ((data.confirm != "" || data.password!="")&& data.confirm == data.password) ? "green" : "red"
+    borderColor: (data.confirm == "" && data.password == "") ? "#E5E7EB" :
+    ((data.confirm != "" || data.password!="")&& data.confirm == data.password) ? "green" : "red"
   }
   return (
     <article className="right">
@@ -41,8 +41,12 @@ export default function Right() {
           <Input name="firstname" handle={update} data={data} label="FIRST NAME" type="text"/>
           <Input name="email" data={data} label= "EMAIL" type="email" />
           <Input styles={styling} name="password" handle={update} data={data} label="PASSWORD" type="password"/>
-          {!((data.confirm != "" || data.password!="") && data.confirm == data.password) ? <p>*password does not match</p>:
-          <p className='match'>password does match</p>}
+          {(data.confirm == "" && data.password == "")?<p className="hide">*Password does not match</p>
+          :!((data.confirm != "" || data.password!="")&& data.confirm) == data.password
+          ?<p>*password does not match</p> :
+          <p className='match'>password does match</p>          
+          }
+
         </div>
         <div>
         <Input name="lastname" data={data} label="LAST NAME" type="text"/>
