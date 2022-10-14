@@ -42,9 +42,9 @@ export default function Right() {
           <Input name="email" data={data} label= "EMAIL" type="email" />
           <Input styles={styling} name="password" handle={update} data={data} label="PASSWORD" type="password"/>
           {(data.confirm == "" && data.password == "")?<p className="hide">*Password does not match</p>
-          :!((data.confirm != "" || data.password!="")&& data.confirm) == data.password
-          ?<p>*password does not match</p> :
-          <p className='match'>password does match</p>          
+          :((data.confirm != "" || data.password!="")&& data.confirm) == data.password
+          ? <p className='match'>password does match</p>:
+          <p>*password does not match</p>      
           }
 
         </div>
