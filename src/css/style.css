@@ -71,7 +71,7 @@ article.right > div:nth-child(2) h2{
   margin-bottom: 1.5%;
 }
 article.right > div:nth-child(2) label{
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 input.PASSWORD,input.CONFIRM{
   margin-bottom: 0%;
@@ -166,8 +166,11 @@ article.right > div:nth-child(3) button:hover{
     margin-bottom: 2vh;
   }
   article.right > div:nth-child(2){
-    height: 22vh;
+    height: 28vh;
     padding: 1vh 3vh;
+  }
+  input.FIRST,input.EMAIL,input.PHONE,input.LAST{
+    margin-bottom: 0.8vh;
   }
   article.right > div:nth-child(2) h2{
     text-align: center;
